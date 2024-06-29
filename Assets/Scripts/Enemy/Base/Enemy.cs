@@ -40,7 +40,7 @@ public class Enemy : MonoBehaviour, IDamagable, IEnemyMoveable, ITriggerCheckabl
     {
         CurrentHealth = MaxHealth;
 
-        RB.GetComponent<Rigidbody2D>();
+        RB = GetComponent<Rigidbody2D>();
 
         StateMachine.Initialize(IdleState);
     }
