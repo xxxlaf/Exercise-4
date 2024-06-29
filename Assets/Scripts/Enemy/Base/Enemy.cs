@@ -31,6 +31,7 @@ public class Enemy : MonoBehaviour, IDamagable, IEnemyMoveable, ITriggerCheckabl
     public void Awake()
     {
         StateMachine = new EnemyStateMachine();
+
         IdleState = new EnemyIdleState(this, StateMachine);
         ChaseState = new EnemyChaseState(this, StateMachine);
         AttackState = new EnemyAttackState(this, StateMachine);
