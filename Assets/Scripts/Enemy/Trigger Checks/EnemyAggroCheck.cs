@@ -10,6 +10,7 @@ public class EnemyAggroCheck : MonoBehaviour
     private void Awake()
     {
         PlayerTarget = GameObject.FindGameObjectWithTag("Player");
+        Debug.Log(PlayerTarget);
 
         _enemy = GetComponentInParent<Enemy>();
     }
@@ -18,6 +19,7 @@ public class EnemyAggroCheck : MonoBehaviour
     {
         if (collision.gameObject == PlayerTarget)
         {
+            Debug.Log("Entered aggro distance");
             _enemy.SetAggroStatus(true);
         }
     }
@@ -26,6 +28,7 @@ public class EnemyAggroCheck : MonoBehaviour
     {
         if (collision.gameObject == PlayerTarget)
         {
+            Debug.Log("Left aggro distance");
             _enemy.SetAggroStatus(false);
         }
     }

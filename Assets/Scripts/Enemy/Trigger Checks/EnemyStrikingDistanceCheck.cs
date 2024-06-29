@@ -18,6 +18,7 @@ public class EnemyStrikingDistanceCheck : MonoBehaviour
     {
         if (collision.gameObject == PlayerTarget)
         {
+            Debug.Log("Entered striking distance");
             _enemy.SetStrikingDistanceBool(true);
         }
     }
@@ -26,6 +27,7 @@ public class EnemyStrikingDistanceCheck : MonoBehaviour
     {
         if (collision.gameObject == PlayerTarget)
         {
+            Debug.Log("Left striking distance");
             _enemy.SetStrikingDistanceBool(false);
         }
     }
